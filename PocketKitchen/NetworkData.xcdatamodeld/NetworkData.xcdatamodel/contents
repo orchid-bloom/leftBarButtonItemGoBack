@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1510" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="QFAdvertisement" representedClassName="QFAdvertisement" syncable="YES">
+        <attribute name="enjoyVideoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageFilename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoImageFilename1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="videoImageFilename2" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="QFCookbookSection" representedClassName="QFCookbookSection" syncable="YES">
+        <attribute name="imageFilename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vegetables" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="QFVegetable" inverseName="section" inverseEntity="QFVegetable" syncable="YES"/>
+    </entity>
+    <entity name="QFVegetable" representedClassName="QFVegetable" syncable="YES">
+        <attribute name="agreementAmount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="catalogId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="clickCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cookingMethod" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cookingWay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="downloadCount" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="effect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="englishName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fittingCrowd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fittingRestriction" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagePathLandscape" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagePathPortrait" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagePathThumbnails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_collect" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_purchase" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isCelebritySelf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="materialVideoPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="method" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productionProcessPath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="taste" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeLength" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vegetable_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vegetableCookingId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="section" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="QFCookbookSection" inverseName="vegetables" inverseEntity="QFCookbookSection" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="QFCookbookSection" positionX="-126" positionY="-99" width="128" height="118"/>
+        <element name="QFVegetable" positionX="-488" positionY="-346" width="128" height="433"/>
+        <element name="QFAdvertisement" positionX="-306" positionY="-198" width="128" height="135"/>
+    </elements>
+</model>

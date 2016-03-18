@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="108" id="KGk-i7-Jjw" customClass="QFSearchCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="108"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="q6D-m9-KA7">
+                        <rect key="frame" x="20" y="0.0" width="440" height="100"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="3BL-f9-3NI">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="Fmp-1s-yHs">
+                        <rect key="frame" x="0.0" y="21" width="20" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="HLa-yJ-nUq"/>
+                            <constraint firstAttribute="height" constant="65" id="shH-no-Cnk"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_arrow_rgiht" translatesAutoresizingMaskIntoConstraints="NO" id="5EX-hh-Eg2">
+                        <rect key="frame" x="460" y="21" width="20" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="ABw-2V-4ld"/>
+                            <constraint firstAttribute="height" constant="65" id="S0Z-RO-mKX"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="Fmp-1s-yHs" secondAttribute="centerY" id="8W3-95-qbN"/>
+                    <constraint firstItem="5EX-hh-Eg2" firstAttribute="leading" secondItem="q6D-m9-KA7" secondAttribute="trailing" id="9Ov-9o-Q0F"/>
+                    <constraint firstItem="q6D-m9-KA7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Q3K-Tb-7oh"/>
+                    <constraint firstItem="Fmp-1s-yHs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VHw-xE-8a6"/>
+                    <constraint firstAttribute="bottom" secondItem="q6D-m9-KA7" secondAttribute="bottom" constant="7" id="Zgq-Fz-kex"/>
+                    <constraint firstAttribute="centerY" secondItem="5EX-hh-Eg2" secondAttribute="centerY" id="bXL-k4-FYd"/>
+                    <constraint firstItem="q6D-m9-KA7" firstAttribute="leading" secondItem="Fmp-1s-yHs" secondAttribute="trailing" id="d79-xA-pSI"/>
+                    <constraint firstAttribute="trailing" secondItem="5EX-hh-Eg2" secondAttribute="trailing" id="xvL-Ec-4jZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="q6D-m9-KA7" id="HJr-MW-Zd6"/>
+            </connections>
+            <point key="canvasLocation" x="330" y="355"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="search_arrow_left" width="16" height="65"/>
+        <image name="search_arrow_rgiht" width="16" height="65"/>
+    </resources>
+</document>
